@@ -14,6 +14,7 @@ import img3 from "figma:asset/0299c6a38e7b39248f229800c3d244b83e40191c.png";
 import img4 from "figma:asset/e3a3be76c2e9290d8287af36b91cbcabaeeb3359.png";
 import img5 from "figma:asset/8881e1a3a99145ac7610a512b5248cc96e189499.png";
 import itamarImage from 'figma:asset/3c124104c796c8786c87e839747db5a083ca3ee7.png';
+import karaImg from"@/assets/kara.jpeg";
 
 export function AboutPage() {
   const teamMembers = [
@@ -28,6 +29,12 @@ export function AboutPage() {
       role: 'Treasurer, Director of Operations & Co-founder',
       bio: 'North Carolina, USA',
       image: emilieImage,
+    },
+    {
+      name: 'Kara Perez',
+      role: 'Secretary',
+      bio: 'Massachusetts, USA',
+      image: karaImg,
     },
     {
       name: 'Daniel Burkowsky',
@@ -46,12 +53,6 @@ export function AboutPage() {
       role: 'Director of Communication',
       bio: 'London, UK',
       image: floraImage,
-    },
-    {
-      name: 'Joel David Gomez Aguilar',
-      role: 'Volunteer Program Manager',
-      bio: 'Cartagena, Colombia',
-      image: joelImage,
     },
   ];
 
@@ -368,7 +369,7 @@ export function AboutPage() {
           <p className="mb-8 max-w-7xl text-center mx-auto">
             ALZA Foundation is governed by a volunteer Board of Directors and operated with program and administrative support from volunteers and partners.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-4">
             {teamMembers.map((member, index) => (
               <Card key={index}>
                 <CardContent className="p-6">
