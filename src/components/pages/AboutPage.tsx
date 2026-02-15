@@ -13,7 +13,6 @@ import img2 from "figma:asset/a94a5d4b122ee078c672871061a6d4214f9b3b90.png";
 import img3 from "figma:asset/0299c6a38e7b39248f229800c3d244b83e40191c.png";
 import img4 from "figma:asset/e3a3be76c2e9290d8287af36b91cbcabaeeb3359.png";
 import img5 from "figma:asset/8881e1a3a99145ac7610a512b5248cc96e189499.png";
-import itamarImage from 'figma:asset/3c124104c796c8786c87e839747db5a083ca3ee7.png';
 import karaImg from"@/assets/kara.jpeg";
 
 export function AboutPage() {
