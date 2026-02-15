@@ -10,7 +10,6 @@ import img5 from "figma:asset/8881e1a3a99145ac7610a512b5248cc96e189499.png";
 import img6 from "figma:asset/dc13cb18f3c0ed87ec2614285f16480d58d29502.png";
 import danielaImg from "figma:asset/0263f7f40c2bc666e9bf62859aef2e263ca0054a.png";
 import itamarImg from "@/assets/5d37cdcd8ee043d74224177b6cab23de89e1a4ab.png";
-import yurleidisImg from "@/assets/yurleidis-screenshot.png";
 
 interface HomePageProps {
   onNavigate: (page: string) => void;
