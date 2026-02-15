@@ -37,7 +37,7 @@ export function AboutPage() {
     },
     {
       name: 'Daniel Burkowsky',
-      role: 'Secretary & Governance Director',
+      role: 'Governance Director',
       bio: 'New York, USA',
       image: danielImage,
     },
