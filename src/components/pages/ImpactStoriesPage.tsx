@@ -10,6 +10,8 @@ import img2 from "figma:asset/a94a5d4b122ee078c672871061a6d4214f9b3b90.png";
 import img3 from "figma:asset/0299c6a38e7b39248f229800c3d244b83e40191c.png";
 import img4 from "figma:asset/e3a3be76c2e9290d8287af36b91cbcabaeeb3359.png";
 import img5 from "figma:asset/8881e1a3a99145ac7610a512b5248cc96e189499.png";
+import yurleidisImg from "@/assets//yurleidis-screenshot.png";
+import joseImg from "@/assets/jose-screenshot.png";
 
 interface ImpactStoriesPageProps {
   onNavigate: (page: string) => void;
@@ -82,15 +84,15 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
     },
     {
       name: 'Jose Rodríguez Cervantes',
-      quote: 'Coming soon',
-      image: 'https://images.unsplash.com/photo-1672685667592-0392f458f46f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYW4lMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjEwMzA4OTJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      quote: 'José is a highly studious and driven student supported by the ALZA Foundation. With remarkable discipline and determination, he taught himself English and achieved fluency in less than two years. His ambition, initiative, and commitment to self-improvement reflect the kind of perseverance that inspires those around him and positions him for continued success. From Jose: Este apoyo no es solo financiero, también me da esperanza y me recuerda que hay personas que creen en estudiantes como yo y eso significa más de lo que puedo explicar.',
+      image: joseImg,
       program: 'Language and University Scholarship 2025',
       outcome: 'Finance and International Business',
     },
     {
       name: 'Yurleidis Herrera Herrera',
-      quote: 'Coming soon',
-      image: 'https://images.unsplash.com/photo-1581065178047-8ee15951ede6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0fGVufDF8fHx8MTc2MTA0OTY3Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      quote: 'Yurleidis is one of the dedicated students supported by the ALZA Foundation. She was among the most studious students our founder had the privilege to teach, consistently demonstrating strong motivation, focus, and determination. Through her hard work and perseverance, she is successfully completing her university studies in Nursing to get prepared to serve as a pillar of strength and care within her community. From Yurleidis: Este apoyo no solo representa una contribución económica, sino también un voto de confianza en mi potencial y en mis sueños.',
+      image: yurleidisImg,
       program: 'University Scholarship 2023',
       outcome: 'Nursing - Specialization in Audit Nursing',
     },

@@ -10,6 +10,11 @@ import rafaelNunezLogo from 'figma:asset/05394fb99263a9d5dbb86de8abe522d90c3be5b
 import uMayorLogo from 'figma:asset/ca69cd091e4d21ea872bfc6af75b374d33b785d4.png';
 import unicolomboLogo from 'figma:asset/cc9f039e0af4e080a15ba1dac877f138a1d15de5.png';
 import utbLogo from 'figma:asset/03b960d2ec7fbbb14b5f1b44e88892efa0741ab3.png';
+import tierrabombaImg from "@/assets/tierra-bomba.jpg";
+import laboquillaImg from "@/assets/la-boquilla.jpg";
+import villaaranjuezImg from "@/assets/villa-aranjuez.jpg";
+import olayaherreraImg from "@/assets/olaya-herrera.jpg";
+
 
 interface ProgramsPageProps {
   onNavigate: (page: string) => void;
@@ -73,22 +78,22 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
     {
       name: 'Tierra Bomba',
       story: 'Tierra Bomba is a close-knit island community near Cartagena, Colombia, rooted in fishing and cultural traditions. Ongoing local efforts focus on expanding opportunities for young people.',
-      image: 'https://images.unsplash.com/photo-1579378536395-cdb09ff8e2d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
+      image: tierrabombaImg,
     },
     {
       name: 'La Boquilla',
       story: 'La Boquilla is an Afro-Caribbean coastal community north of Cartagena, known for its fishing heritage and cultural traditions. Local initiatives in sustainable tourism help strengthen economic opportunities for residents.',
-      image: 'https://images.unsplash.com/photo-1758270704025-0e1a1793e1ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwc3R1ZGVudHMlMjBzdHVkeWluZ3xlbnwxfHx8fDE3NjEwMzcxNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: laboquillaImg,
     },
     {
       name: 'Villas de Aranjuez',
       story: 'Villas de Aranjuez is a working-class neighborhood in Cartagena’s Barrios Unidos area. Recent improvements in infrastructure and community services support ongoing efforts to expand access to health, education, and social support.',
-      image: 'https://images.unsplash.com/photo-1579378536395-cdb09ff8e2d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDb2xvbWJpYW4lMjBzdHVkZW50cyUyMGVkdWNhdGlvbnxlbnwxfHx8fDE3NjEwNzcyMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: villaaranjuezImg,
     },
     {
       name: 'Olaya Herrera',
       story: 'Olaya Herrera is a large neighborhood in southeast Cartagena known for its community cohesion and cultural vibrancy. The area faces challenges such as limited resources, and high violence.',
-      image: 'https://images.unsplash.com/photo-1579378536395-cdb09ff8e2d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDb2xvbWJpYW4lMjBzdHVkZW50cyUyMGVkdWNhdGlvbnxlbnwxfHx8fDE3NjEwNzcyMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: olayaherreraImg,
     },
   ];
 

@@ -9,7 +9,8 @@ import img4 from "figma:asset/e3a3be76c2e9290d8287af36b91cbcabaeeb3359.png";
 import img5 from "figma:asset/8881e1a3a99145ac7610a512b5248cc96e189499.png";
 import img6 from "figma:asset/dc13cb18f3c0ed87ec2614285f16480d58d29502.png";
 import danielaImg from "figma:asset/0263f7f40c2bc666e9bf62859aef2e263ca0054a.png";
-import itamarImg from "figma:asset/5d37cdcd8ee043d74224177b6cab23de89e1a4ab.png";
+import itamarImg from "@/assets/5d37cdcd8ee043d74224177b6cab23de89e1a4ab.png";
+import yurleidisImg from "@/assets/yurleidis-screenshot.png";
 
 interface HomePageProps {
   onNavigate: (page: string) => void;
@@ -49,7 +50,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
     },
     {
       name: 'Itamar Sofia Rodríguez Gonzalez',
-      role: 'University Scholarship Recipient',
+      role: 'Language & University Scholarship Recipient',
       quote: 'Gracias a la beca que recibí, pude acceder a clases de inglés que me han abierto puertas increíbles, tanto en mi carrera académica como en mi vida personal. La universidad ha sido un desafío, pero también una experiencia increíble que me ha permitido crecer como persona y profesional. He podido desarrollar habilidades valiosas, ampliar mi red de contactos y descubrir nuevas pasiones. Estoy agradecido por esta oportunidad y espero que más estudiantes puedan beneficiarse de este programa y alcanzar sus objetivos.',
       image: itamarImg,
     },
