@@ -82,7 +82,7 @@ export function Footer({ onNavigate }: FooterProps) {
                 </a>
               </li>
             </ul>
-            <div className="flex gap-4 mt-6">
+            {/*<div className="flex gap-4 mt-6">
               <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
                 <Facebook size={20} />
               </a>
@@ -92,7 +92,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
                 <Linkedin size={20} />
               </a>
-            </div>
+            </div>*/}
           </div>
         </div>
 
