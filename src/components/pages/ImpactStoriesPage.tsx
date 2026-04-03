@@ -375,6 +375,26 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
         </div>
       </section>
 
+      {/* Newsletter Subscription */}
+      <section className="py-12 bg-muted">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-6 text-center font-bold text-2xl">
+            Stay Connected
+          </h2>
+          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Subscribe to our newsletter to get notified about new events, student stories, and impact updates from ALZA Foundation.
+          </p>
+          <div className="relative w-full" style={{ height: '270px' }}>
+            <iframe 
+              title='Signup form powered by Zeffy' 
+              style={{ position: 'absolute', border: 0, top: 0, left: 0, bottom: 0, right: 0, width: '100%', height: '100%' }} 
+              src='https://www.zeffy.com/en-US/embed/newsletter-form/subscribe-to-get-notified-about-new-events-31148' 
+              allowTransparency={true}
+            />
+          </div>
+        </div>
+      </section>
+
        {/* Story Carousel 
         <section className="py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
