@@ -193,6 +193,9 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
                     </p>
                   </div>
                 </div>
+                <p className="text-center text-muted-foreground italic text-sm mt-6">
+                  ALZA Foundation, Inc. is proudly run by an all-volunteer board of directors who serve without compensation.
+                </p>
               </CardContent>
             </Card>
 

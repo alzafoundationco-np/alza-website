@@ -42,7 +42,7 @@ export function GetInvolvedPage({
       amount: "Zeffy",
       preferred: true,
       benefits: [
-        "No transaction fees",
+        "No transaction fees  --  Note: Zeffy adds an optional platform tip at checkout. To opt out, select 'Other' under the tip section and enter $0.",
         "One-time/Recurring payment",
         "Credit/Debit card",
         "Tax receipt",
@@ -59,24 +59,13 @@ export function GetInvolvedPage({
         "Tax receipt",
       ],
     },
-    {
-      name: "Online Payment",
-      amount: "Stripe",
-      preferred: false,
-      benefits: [
-        "Transaction Fees",
-        "One-time/Recurring payment",
-        "Credit/Debit card",
-        "Tax receipt",
-      ],
-    },
   ];
 
   const fundraisingGoals = [
     {
       name: "First Year Fundraising Campaign",
       target: 28000,
-      current: 7812.30,
+      current: 8722.30,
       description:
         "Support 10 students with full university scholarship and foreign language courses in 2026.",
     },
@@ -118,7 +107,7 @@ export function GetInvolvedPage({
             </Card>
             <Card>
               <CardContent className="p-6 text-center">
-                <h3 className="text-primary mb-2">$4,000</h3>
+                <h3 className="text-primary mb-2">$2,500</h3>
                 <p className="text-muted-foreground">Funds a full-year university scholarship</p>
               </CardContent>
             </Card>
@@ -128,7 +117,10 @@ export function GetInvolvedPage({
             <Button size="lg" onClick={() => {window.open("https://www.zeffy.com/en-US/donation-form/alza-transform-lives-through-education-in-cartagena", "_blank")}} className="px-8 py-6 text-lg">
               Donate Now
             </Button>
-          </div>
+            <p className="text-xs text-muted-foreground mt-6 max-w-md mx-auto">
+              Note: Zeffy adds an optional platform tip at checkout. To opt out, select "Other" under the tip section and enter $0.
+            </p>
+        </div>
       </section>
       
       {/* Donation Options */}
@@ -148,7 +140,7 @@ export function GetInvolvedPage({
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
             {donationTiers.map((tier, index) => (
               <Card
                 key={index}

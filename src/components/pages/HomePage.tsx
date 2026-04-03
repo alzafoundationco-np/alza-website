@@ -59,7 +59,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
     <div>
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/50 z-10" />
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1678422151003-4a920e7a3de8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDYXJ0YWdlbmElMjBDb2xvbWJpYSUyMGNvbG9yZnVsfGVufDF8fHx8MTc2MjUzMzA2Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
           alt="Cartagena, Colombia"

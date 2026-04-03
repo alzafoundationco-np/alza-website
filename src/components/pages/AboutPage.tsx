@@ -234,7 +234,7 @@ export function AboutPage() {
                     {
                       year: "2025",
                       text:
-                        "To ensure no student is held back by financial barriers, ALZA Foundation, Inc was founded and the board of director was established.",
+                        "To ensure no student is held back by financial barriers, ALZA Foundation, Inc. was founded and the board of directors was established.",
                     },
                   ].map((item, index) => (
                     <div
