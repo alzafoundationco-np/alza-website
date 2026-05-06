@@ -235,7 +235,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="max-w-6x3 text-center mx-auto">
-            ALZA Foundation is a U.S.-registered 501(c)(3) nonprofit organization supporting education access in Colombia.
+            ALZA Foundation, Inc. is a U.S.-registered 501(c)(3) nonprofit organization supporting education access in Colombia. \n
+            [EIN:  41-2526575]
           </p>        
         </div>
       </section>

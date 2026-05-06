@@ -121,7 +121,7 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
                   Legal Status
           </h2>
           <p className="max-w-6x3 text-center mx-auto">
-            ALZA Foundation is a U.S.-registered 501(c)(3) nonprofit organization, governed by a Board of Directors, which supports education access in Colombia.
+            ALZA Foundation, Inc. is a U.S.-registered 501(c)(3) nonprofit organization, governed by a Board of Directors, which supports education access in Colombia.
           </p>        
         </div>
       </section>

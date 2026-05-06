@@ -74,9 +74,9 @@ export function ContactPage() {
                       <MapPin className="text-primary" size={20} />
                     </div>
                     <div>
-                      <h4 className="mb-2">State & Country of Registration</h4>
+                      <h4 className="mb-2">Address & Country of Registration</h4>
                       <p className="text-muted-foreground">
-                        North Carolina, USA
+                        9300 Harris Glen Dr, NC 28269, USA
                       </p>
                     </div>
                   </div>
@@ -91,8 +91,8 @@ export function ContactPage() {
                     </div>
                     <div>
                       <h4 className="mb-2 font-bold">Email</h4>
-                      <a href="mailto:alza.foundation.co@gmail.com" className="text-primary hover:underline">
-                        alza.foundation.co@gmail.com
+                      <a href="mailto:eroseau@alzaeducation.org" className="text-primary hover:underline">
+                        eroseau@alzaeducation.org
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">General inquiries & student applications</p>
                     </div>
@@ -202,7 +202,7 @@ export function ContactPage() {
       <section className="py-8 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="max-w-6x3 text-center mx-auto">
-            ALZA Foundation is a U.S.-registered 501(c)(3) nonprofit organization, founded in 2025, supporting education access in Colombia.
+            ALZA Foundation, Inc. is a U.S.-registered 501(c)(3) nonprofit organization, founded in 2025, supporting education access in Colombia. [EIN: 41-2526575]
           </p>        
         </div>
       </section>

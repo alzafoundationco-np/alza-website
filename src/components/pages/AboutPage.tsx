@@ -107,7 +107,7 @@ export function AboutPage() {
                   About ALZA Foundation
               </h2>
           <p className="max-w-3xl mx-auto">
-            ALZA Foundation is a U.S.-registered nonprofit organization dedicated to expanding access to language learning and higher education for high-potential students in Colombia.
+            ALZA Foundation, Inc. is a U.S.-registered nonprofit organization dedicated to expanding access to language learning and higher education for high-potential students in Colombia.
           </p>
         </div>
       </section>

@@ -16,6 +16,9 @@ export function Footer({ onNavigate }: FooterProps) {
             <p className="text-primary-foreground/80">
               Expanding access to higher education for high-potential students in Colombia.
             </p>
+            <p className="text-primary-foreground/80">
+            [EIN: 41-2526575]
+            </p>
           </div>
 
           {/* Quick Links */}
@@ -73,12 +76,12 @@ export function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <MapPin size={18} className="mt-1 flex-shrink-0" />
-                <span className="text-primary-foreground/80">Charlotte, NC, USA</span>
+                <span className="text-primary-foreground/80">9300 Harris Glen Dr, Charlotte, NC 28269, USA</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={18} className="flex-shrink-0" />
-                <a href="mailto:alza.foundation.co@gmail.com" className="text-primary-foreground/80 hover:text-primary-foreground">
-                  alza.foundation.co@gmail.com
+                <a href="mailto:eroseau@alzaeducation.org" className="text-primary-foreground/80 hover:text-primary-foreground">
+                  eroseau@alzaeducation.org
                 </a>
               </li>
             </ul>
@@ -98,7 +101,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © {new Date().getFullYear()} ALZA Foundation, Inc. A U.S. registered 501(c)(3) nonprofit. All rights reserved. 
+            © {new Date().getFullYear()} ALZA Foundation, Inc. A U.S. registered 501(c)(3) nonprofit [EIN:  41-2526575]. All rights reserved. 
           </p>
         </div>
       </div>
