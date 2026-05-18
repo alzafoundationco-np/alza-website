@@ -10,6 +10,7 @@ import { TransparencyPage } from './components/pages/TransparencyPage';
 import { ContactPage } from './components/pages/ContactPage';
 import { StudentPortalPage } from './components/pages/StudentPortalPage';
 import { VolunteerPage } from './components/pages/VolunteerPage';
+import { LegalPage } from './components/pages/LegalPage';
 import { Toaster } from './components/ui/sonner';
 
 export default function App() {
@@ -40,6 +41,8 @@ export default function App() {
         return <StudentPortalPage />;
       case 'volunteer':
         return <VolunteerPage onNavigate={handleNavigate} />;
+      case 'legal':
+        return <LegalPage />;
       default:
         return <HomePage onNavigate={handleNavigate} />;
     }

@@ -103,6 +103,21 @@ export function Footer({ onNavigate }: FooterProps) {
           <p className="text-primary-foreground/60">
             © {new Date().getFullYear()} ALZA Foundation, Inc. A U.S. registered 501(c)(3) nonprofit [EIN:  41-2526575]. All rights reserved. 
           </p>
+          <div className="flex justify-center gap-4 mt-3">
+            <button 
+              onClick={() => onNavigate('legal')} 
+              className="text-primary-foreground/60 hover:text-primary-foreground text-sm underline"
+            >
+              Terms of Use
+            </button>
+            <span className="text-primary-foreground/40">|</span>
+            <button 
+              onClick={() => onNavigate('legal')} 
+              className="text-primary-foreground/60 hover:text-primary-foreground text-sm underline"
+            >
+              Privacy Policy
+            </button>
+          </div>
         </div>
       </div>
     </footer>
