@@ -81,7 +81,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li className="flex items-center gap-2">
                 <Mail size={18} className="flex-shrink-0" />
                 <a href="mailto:eroseau@alzaeducation.org" className="text-primary-foreground/80 hover:text-primary-foreground">
-                  eroseau@alzaeducation.org
+                  info@alzaeducation.org
                 </a>
               </li>
             </ul>
@@ -101,7 +101,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © {new Date().getFullYear()} ALZA Foundation, Inc. A U.S. registered 501(c)(3) nonprofit [EIN:  41-2526575]. All rights reserved. 
+            © {new Date().getFullYear()} ALZA Foundation, Inc. A U.S. registered 501(c)(3) nonprofit. All rights reserved. 
           </p>
           <div className="flex justify-center gap-4 mt-3">
             <button 

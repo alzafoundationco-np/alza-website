@@ -92,7 +92,7 @@ export function ContactPage() {
                     <div>
                       <h4 className="mb-2 font-bold">Email</h4>
                       <a href="mailto:eroseau@alzaeducation.org" className="text-primary hover:underline">
-                        eroseau@alzaeducation.org
+                        info@alzaeducation.org
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">General inquiries & student applications</p>
                     </div>
