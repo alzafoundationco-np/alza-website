@@ -5,7 +5,7 @@ import { Label } from '../ui/label';
 import { Textarea } from '../ui/textarea';
 import { Button } from '../ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
-import { Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Clock, Facebook, Twitter, InstagramIcon, Linkedin } from 'lucide-react';
 import { toast } from 'sonner@2.0.3';
 
 export function ContactPage() {
@@ -58,7 +58,7 @@ export function ContactPage() {
                       <MapPin className="text-primary" size={20} />
                     </div>
                     <div>
-                      <h4 className="mb-2">Name</h4>
+                      <h4 className="mb-2 font-bold">Name</h4>
                       <p className="text-muted-foreground">
                         ALZA Foundation, Inc.
                       </p>
@@ -74,7 +74,7 @@ export function ContactPage() {
                       <MapPin className="text-primary" size={20} />
                     </div>
                     <div>
-                      <h4 className="mb-2">Address & Country of Registration</h4>
+                      <h4 className="mb-2 font-bold">Address & Country of Registration</h4>
                       <p className="text-muted-foreground">
                         9300 Harris Glen Dr, NC 28269, USA
                       </p>
@@ -104,10 +104,26 @@ export function ContactPage() {
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <InstagramIcon className="text-primary" size={20} />
+                    </div>
+                    <div>
+                      <h4 className="mb-2 font-bold">Instagram</h4>
+                      <a href="https://www.instagram.com/alzaeducation?igsh=MWNkdWpqYjZycjlhNg%3D%3D&utm_source=qr" className="text-primary hover:underline">
+                        alzaeducation
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <MapPin className="text-primary" size={20} />
                     </div>
                     <div>
-                      <h4 className="mb-2">Primary Area of Work</h4>
+                      <h4 className="mb-2 font-bold">Primary Area of Work</h4>
                       <p className="text-muted-foreground">
                         Cartagena, Colombia
                       </p>

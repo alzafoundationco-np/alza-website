@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin } from 'lucide-react';
+import { Facebook, Twitter, InstagramIcon, Linkedin, Mail, MapPin } from 'lucide-react';
 import logo from 'figma:asset/6633f9bdcf1a9d0e83d9b51432ca5cce6d301fe2.png';
 
 interface FooterProps {
@@ -84,18 +84,20 @@ export function Footer({ onNavigate }: FooterProps) {
                   info@alzaeducation.org
                 </a>
               </li>
-            </ul>
-            {/*<div className="flex gap-4 mt-6">
+            {/*<li className="flex gap-4 mt-6">
               <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
+              </a>*/}
+              <li href="https://www.instagram.com/alzaeducation?igsh=MWNkdWpqYjZycjlhNg%3D%3D&utm_source=qr" className="flex items-center gap-2">
+                <InstagramIcon size={20} className="flex-shrink-0" />
+                <a href="https://www.instagram.com/alzaeducation?igsh=MWNkdWpqYjZycjlhNg%3D%3D&utm_source=qr" className="text-primary-foreground/80 hover:text-primary-foreground">
+                  alzaeducation
+                </a>
+              </li>
+              {/*<a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
                 <Linkedin size={20} />
-              </a>
-            </div>*/}
+              </a>*/}
+            </ul>
           </div>
         </div>
 
