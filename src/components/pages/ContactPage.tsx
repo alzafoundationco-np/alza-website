@@ -48,10 +48,10 @@ export function ContactPage() {
       {/* Contact Info & Form */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {/* Contact Information */}
-            <div className="space-y-6">
-              <Card>
+            <div className="flex flex-col justify-between gap-4 md:gap-0 h-full">
+              <Card className="w-full">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -67,7 +67,7 @@ export function ContactPage() {
                 </CardContent>
               </Card>
               
-              <Card>
+              <Card className="w-full">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -83,7 +83,7 @@ export function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="w-full">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -100,7 +100,7 @@ export function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="w-full">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -116,7 +116,7 @@ export function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="w-full">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -134,13 +134,13 @@ export function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="md:col-span-2">
-              <Card>
+            <div className="md:col-span-2 h-full">
+              <Card className="h-full flex flex-col">
                 <CardHeader>
                   <CardTitle><b>Send Us a Message</b></CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                <CardContent className="flex-1">
+                  <form onSubmit={handleSubmit} className="space-y-6 h-full flex flex-col justify-between">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="name">Full Name *</Label>
