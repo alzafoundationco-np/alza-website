@@ -108,8 +108,8 @@ export function ContactPage() {
                     </div>
                     <div>
                       <h4 className="mb-2 font-bold">Instagram</h4>
-                      <a href="https://www.instagram.com/alzaeducation?igsh=MWNkdWpqYjZycjlhNg%3D%3D&utm_source=qr" className="text-primary hover:underline">
-                        alzaeducation
+                      <a href="https://www.instagram.com/alzaeducation?igsh=MWNkdWpqYjZycjlhNg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                        @alzaeducation
                       </a>
                     </div>
                   </div>

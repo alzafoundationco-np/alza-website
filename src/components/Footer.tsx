@@ -88,10 +88,10 @@ export function Footer({ onNavigate }: FooterProps) {
               <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
                 <Facebook size={20} />
               </a>*/}
-              <li href="https://www.instagram.com/alzaeducation?igsh=MWNkdWpqYjZycjlhNg%3D%3D&utm_source=qr" className="flex items-center gap-2">
+              <li href="https://www.instagram.com/alzaeducation?igsh=MWNkdWpqYjZycjlhNg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <InstagramIcon size={20} className="flex-shrink-0" />
-                <a href="https://www.instagram.com/alzaeducation?igsh=MWNkdWpqYjZycjlhNg%3D%3D&utm_source=qr" className="text-primary-foreground/80 hover:text-primary-foreground">
-                  alzaeducation
+                <a href="https://www.instagram.com/alzaeducation?igsh=MWNkdWpqYjZycjlhNg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-primary-foreground">
+                  @alzaeducation
                 </a>
               </li>
               {/*<a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
