@@ -4,18 +4,21 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '../ui/accordion';
+import { useTranslation } from 'react-i18next';
 
 export function LegalPage() {
+  const { t } = useTranslation();
+
   return (
     <div>
       {/* Hero */}
       <section className="bg-primary text-primary-foreground py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="mb-6 text-center font-bold text-2xl">
-            Legal Information
+            {t('legal-information')}
           </h2>
           <p className="max-w-3xl mx-auto">
-            Please review our Terms of Use and Privacy Policy to understand how we collect, use, and protect your information.
+            {t('legal_invitation_to_read')}
           </p>
         </div>
       </section>
@@ -27,111 +30,111 @@ export function LegalPage() {
             {/* Terms of Use */}
             <AccordionItem value="terms" className="border rounded-lg px-6">
               <AccordionTrigger className="text-xl font-bold hover:no-underline">
-                Terms of Use
+                {t('terms-of-use')}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground space-y-4 pt-4">
                 <p>
-                  <strong>Effective Date</strong> May 18, 2026
+                  <strong>{t('effective-date')}</strong> {t('may')} 18, 2026
                 </p>
 
                 <p>
-                   Welcome to the ALZA Foundation, Inc. website (the "Site"). The Site is owned and operated by ALZA Foundation, Inc. ("we," "us," or "our"), a nonprofit organization registered in the State of North Carolina. By accessing or using our Site, you agree to be bound by these Terms of Use. 
+                   {t('tou_intro')} 
                 </p>
                 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">1. Purpose of the Site</h3>
+                  <h3 className="font-bold text-foreground mb-2">{t('tou1')}</h3>
                   <p>
-                    The ALZA Foundation, Inc. provides educational resources, scholarship information, and program updates. The content on this Site—including program descriptions, impact stories, and transparency reports—is provided for informational and educational purposes only. It does not constitute professional, legal, or financial advice.
+                    {t('tou1-1')}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">2. Intellectual Property</h3>
+                  <h3 className="font-bold text-foreground mb-2">{t('tou2')}</h3>
                   <p>
-                    All content on this Site, including but not limited to text, graphics, logos, and the unique design elements of our interface, is the exclusive property of the ALZA Foundation, Inc..
+                    {t('tou2-1')}
                   </p>
                   <p>
-                    <strong>Limited License:</strong> You are granted a limited, non-exclusive license to access and use the materials for personal, non-commercial educational purposes.
+                    <strong>{t('limited-license')}:</strong> {t('tou2-2')}
                   </p>
                   <p>
-                    <strong>Restrictions:</strong> You may not copy, redistribute, or use our branding for commercial gain without prior written authorization from the Foundation.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-foreground mb-2">3. Data Collection and Third-Party Services</h3>
-                  <p>
-                    We collect information that you voluntarily provide to us through our contact forms, program applications, and volunteer sign-ups.
-                  </p>
-                  <p>
-                    <strong>Data Processing:</strong> We use third-party service providers to securely store and process your data. This currently includes Google LLC (Google Sheets) and/or Supabase, Inc.
-                  </p>
-                  <p>
-                    <strong>Security:</strong> By using the Site, you acknowledge that your information may be transferred to and maintained on computers located outside of your state or country, where privacy laws may differ. We strive to use commercially acceptable means to protect your personal information through these providers.
+                    <strong>{t('restrictions')}:</strong> {t('tou2-3')}.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">4. Program Applications & Volunteer Inquiries</h3>
+                  <h3 className="font-bold text-foreground mb-2">{t('tou3')}</h3>
                   <p>
-                    <strong>Accuracy:</strong> You agree to provide truthful, accurate, and complete information in all forms submitted on the Site.
+                    {t('tou3-1')}
                   </p>
                   <p>
-                    <strong>No Guarantee of Selection:</strong> Submission of an application for a scholarship or program does not guarantee acceptance, funding, or an award. All selections are made at the sole discretion of the ALZA Foundation, Inc.
+                    <strong>{t('data-processing')}:</strong> {t('tou3-2')}.
                   </p>
                   <p>
-                    <strong>Volunteer Agreements:</strong> Participation as a volunteer is subject to a separate Liability Waiver and Release which must be signed prior to beginning any service.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-foreground mb-2">5. Donations (Zeffy & Zelle)</h3>
-                  <p>
-                    We accept donations to support our mission through the following methods:
-                  </p>
-                  <p>
-                    <strong>Zeffy:</strong> Donations made via Zeffy are processed securely by Zeffy and its payment partners. We do not store your credit card information.
-                  </p>
-                  <p>
-                    <strong>Zelle:</strong> For donations sent via Zelle, donors are responsible for ensuring the accuracy of our recipient information (alza.foundation.co@gmail.com). Direct transfers via Zelle are generally instantaneous and cannot be reversed by the Foundation once initiated.
-                  </p>
-                  <p>
-                    <strong>Refund Policy:</strong> All donations are final and non-refundable. If you believe a technical error occurred during a Zeffy transaction, please contact us within 30 days.
+                    <strong>{t('security')}:</strong> {t('tou3-3')}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">6. Transparency & Third-Party Links</h3>
+                  <h3 className="font-bold text-foreground mb-2">{t('tou4')}</h3>
                   <p>
-                    We value transparency and provide data regarding our impact and financials. While we strive for accuracy, this data is provided "as-is." Our Site may contain links to external websites (such as social media or educational tools). We are not responsible for the content, security, or privacy practices of these third-party sites.
+                    <strong>{t('accuracy')}:</strong> {t('tou4-1')}
+                  </p>
+                  <p>
+                    <strong>{t('no-guarantee-of-selection')}:</strong> {t('tou4-2')}
+                  </p>
+                  <p>
+                    <strong>{t('volunteer-agreements')}:</strong> {t('tou4-3')}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">7. Limitation of Liability</h3>
+                  <h3 className="font-bold text-foreground mb-2">5. {t('donations')} (Zeffy & Zelle)</h3>
                   <p>
-                    To the fullest extent permitted by law, the ALZA Foundation, Inc., its directors, and officers shall not be liable for any indirect, incidental, or consequential damages arising out of your use of the Site or any errors in the content provided.
+                    {t('tou5')}
+                  </p>
+                  <p>
+                    <strong>{t('donation_platform_zeffy')}:</strong> {t('tou5-1')}
+                  </p>
+                  <p>
+                    <strong>{t('donation_platform_zelle')}:</strong> {t('tou5-2')}
+                  </p>
+                  <p>
+                    <strong>{t('refund-policy')}:</strong> {t('tou5-3')}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">8. Governing Law</h3>
+                  <h3 className="font-bold text-foreground mb-2">6. {t('tou6')}</h3>
                   <p>
-                    These Terms of Use are governed by and construed in accordance with the laws of the State of North Carolina, without regard to its conflict of law principles.
+                    {t('tou6-1')}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">9. Changes to These Terms</h3>
+                  <h3 className="font-bold text-foreground mb-2">7. {t('tou7')}</h3>
                   <p>
-                    We reserve the right to update these Terms at any time. We will notify you of any changes by posting the new Terms of Use on this page and updating the "Effective Date" at the top.
+                    {t('tou7-1')}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">10. Contact Information</h3>
+                  <h3 className="font-bold text-foreground mb-2">8. {t('tou8')}</h3>
                   <p>
-                    If you have any questions or concerns regarding these Terms, please contact us at info@alzaeducation.org
+                    {t('tou8-1')}
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-foreground mb-2">9. {t('tou9')}</h3>
+                  <p>
+                    {t('tou9-1')}
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-foreground mb-2">10. {t('tou10')}</h3>
+                  <p>
+                    {t('tou10-1')}
                   </p>
                 </div>
               </AccordionContent>
@@ -140,114 +143,114 @@ export function LegalPage() {
             {/* Privacy Policy */}
             <AccordionItem value="privacy" className="border rounded-lg px-6">
               <AccordionTrigger className="text-xl font-bold hover:no-underline">
-                Privacy Policy
+                {t('privacy')}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground space-y-4 pt-4">
                 <p>
-                  <strong>Effective Date:</strong> May 18, 2026
+                  <strong>{t('effective-date')}:</strong> {t('may')} 18, 2026
                 </p>
 
                 <p>
-                  At <strong>ALZA Foundation, Inc.</strong> ("we," "us," or "our"), we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, and secure your data when you visit https://www.alzaeducation.org/ (the "Site").
+                  {t('at')} <strong>{t('alza_full_name')}</strong> {t('privacy_policy_intro')}
                 </p>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">1. Information We Collect</h3>
+                  <h3 className="font-bold text-foreground mb-2">1. {t('privacy1')}</h3>
                   <p className="mb-2">
-                    We collect information that you voluntarily provide to us when you express interest in our programs, apply for scholarships, or sign up to volunteer. This may include:
+                    {t('privacy1-1')}
                   </p>
                   <ul className="list-disc pl-6 space-y-1">
-                    <li>- Identity Data: Name, date of birth, and gender.</li>
-                    <li>- Contact Data: Email address, phone number, and mailing address.</li>
-                    <li>- Educational Data: School name, grade level, transcripts, or academic interests.</li>
-                    <li>- Volunteer Data: Availability, skills, and background information.</li>
+                    <li>- {t('privacy1-2')}.</li>
+                    <li>- {t('privacy1-3')}.</li>
+                    <li>- {t('privacy1-4')}.</li>
+                    <li>- {t('privacy1-5')}.</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">2. How We Use Your Information</h3>
+                  <h3 className="font-bold text-foreground mb-2">2. {t('privacy2')}</h3>
                   <p className="mb-2">
-                    We use the information we collect to:
+                    {t('privacy2-1')}:
                   </p>
                   <ul className="list-disc pl-6 space-y-1">
-                    <li>- Process program and scholarship applications.</li>
-                    <li>- Communicate with you regarding Foundation updates and opportunities.</li>
-                    <li>- Coordinate volunteer activities.</li>
-                    <li>- Improve our Site and educational offerings.</li>
-                    <li>- Comply with legal obligations and transparency reporting for 501(c)(3) organizations.</li>
+                    <li>- {t('privacy2-2')}.</li>
+                    <li>- {t('privacy2-3')}.</li>
+                    <li>- {t('privacy2-4')}.</li>
+                    <li>- {t('privacy2-5')}.</li>
+                    <li>- {t('privacy2-6')}.</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">3. Data Storage and Third-Party Processors</h3>
+                  <h3 className="font-bold text-foreground mb-2">3. {t('privacy3')}</h3>
                   <p>
-                    <strong>We do not sell your personal information.</strong> To provide our services, we utilize professional third-party infrastructure to store and process your data securely:
+                    <strong>{t('privacy3-1')}</strong> {t('privacy3-2')}:
                   </p>
                   <ul className="list-disc pl-6 space-y-1">
-                    <li>- <strong>Operational Suite:</strong> We utilize Google Workspace (including Google Drive, Forms, and Sheets) for administrative document storage, internal data organization, and initial information collection.</li>
-                    <li>- <strong>Cloud Database:</strong> We utilize Supabase, Inc. for our primary cloud database management, ensuring secure and scalable access to student and program records.</li>
-                    <li>- <strong>Hosting:</strong> Our Site is hosted via Netlify, which may collect basic technical logs (such as IP addresses) for security and site performance monitoring.</li>
-                    <li>- <strong>Donation Processing:</strong> Zeffy and Zelle. When you donate via Zeffy, they collect payment data; when you donate via Zelle, we receive only the information provided by the banking institution (usually name and memo). </li>
+                    <li>- <strong>{t('operational-suite')}:</strong> {t('privacy3-3')}.</li>
+                    <li>- <strong>{t('cloud-database')}:</strong> {t('privacy3-4')}.</li>
+                    <li>- <strong>{t('hosting')}:</strong> {t('privacy3-5')}.</li>
+                    <li>- <strong>{t('donation-processing')}:</strong> {t('privacy3-6')}. </li>
                   </ul>
                   <p>
-                    All third-party providers are selected based on their ability to provide industry-standard security and are restricted from using your data for any purpose other than providing services to the ALZA Foundation, Inc.
+                    {t('privacy3-7')} {t('alza_full_name')}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">4. Data Security</h3>
+                  <h3 className="font-bold text-foreground mb-2">4. {t('data-security')}</h3>
                   <p>
-                    We implement commercially reasonable technical and organizational security measures to protect your data against unauthorized access, alteration, or disclosure.
+                    {t('privacy4')}.
                   </p>
                   <ul className="list-disc pl-6 space-y-1">
-                    <li>- <strong>Google Workspace Security:</strong> Our administrative data, forms, and documents are managed through Google Workspace for Nonprofits. This provides enterprise-level security, including encrypted data at rest and in transit, and is governed by Google’s data protection agreements designed for professional organizations.</li>
-                    <li>- <strong>Supabase Security:</strong> For our cloud database, we utilize Supabase with Row Level Security (RLS) and encrypted storage. This ensures that sensitive student and program information is strictly isolated and accessible only to authorized Foundation personnel.</li>
-                    <li>- <strong>Access Control:</strong> Access to your personal data is restricted to ALZA Foundation staff and authorized volunteers who require the information to perform their specific duties.</li>
+                    <li>- <strong>{t('google-workspace-security')}:</strong> {t('privacy4-1')}.</li>
+                    <li>- <strong>{t('supabase-security')}:</strong> {t('privacy4-2')}.</li>
+                    <li>- <strong>{t('access-control')}:</strong> {t('privacy4-3')}.</li>
                   </ul>
                   <p>
-                    While we strive to use industry-standard protections, please be aware that no method of transmission over the internet or method of electronic storage is 100% secure.
+                    {t('privacy4-4')}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">5. Children's Privacy</h3>
+                  <h3 className="font-bold text-foreground mb-2">5. {t('privacy5')}</h3>
                   <p>
-                    Our Site is intended for students and educators. If we collect personal information from individuals under the age of 13, we strive to comply with the Children’s Online Privacy Protection Act (COPPA). We encourage parents and guardians to supervise their children's online activities.
+                    {t('privacy5-1')}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">6. Your Rights</h3>
+                  <h3 className="font-bold text-foreground mb-2">6. {t('privacy6')}</h3>
                   <p>
-                    Depending on your location, you may have the right to:
+                    {t('privacy6-1')}:
                   </p>
                   <ul className="list-disc pl-6 space-y-1">
-                    <li>- Request access to the personal data we hold about you.</li>
-                    <li>- Request that we correct or delete your personal information.</li>
-                    <li>- Withdraw consent for email communications at any time by clicking "Unsubscribe" or contacting us directly.</li>
+                    <li>- {t('privacy6-2')}.</li>
+                    <li>- {t('privacy6-3')}.</li>
+                    <li>- {t('privacy6-4')}.</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">7. Changes to This Policy</h3>
+                  <h3 className="font-bold text-foreground mb-2">7. {t('privacy7')}</h3>
                   <p>
-                    We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Effective Date" at the top.
+                    {t('privacy7-1')}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">8. Contact Us</h3>
+                  <h3 className="font-bold text-foreground mb-2">8. {t('footer_contact')}</h3>
                   <p>
-                    If you have any questions about this Privacy Policy or how your data is handled via Google Sheets or Supabase, please contact us at:
+                    {t('privacy8')}:
                   </p>
                   <p>
-                    <strong>ALZA Foundation, Inc.</strong>
+                    <strong>{t('alza_full_name')}</strong>
                   </p>
                   <p>
-                    Email: info@alzaeducation.org
+                    {t('email_title')}: info@alzaeducation.org
                   </p>
                   <p>
-                    Address: 9300 Harris Glen Dr, Charlotte, NC 20910
+                    {t('address')}: 9300 Harris Glen Dr, Charlotte, NC 20910
                   </p>
                 </div>
               </AccordionContent>

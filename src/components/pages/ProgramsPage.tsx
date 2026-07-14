@@ -14,6 +14,7 @@ import tierrabombaImg from "@/assets/tierra-bomba.jpg";
 import laboquillaImg from "@/assets/la-boquilla.jpg";
 import villaaranjuezImg from "@/assets/villa-aranjuez.jpg";
 import olayaherreraImg from "@/assets/olaya-herrera.jpg";
+import { useTranslation } from 'react-i18next';
 
 
 interface ProgramsPageProps {
@@ -21,105 +22,84 @@ interface ProgramsPageProps {
 }
 
 export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
+  const { t } = useTranslation();
+
   const programs = [
     {
-      title: 'Foreign Language Scholarship',
+      title: t('program_language_scholarship_section'),
       icon: Languages,
-      description: 'Financial assistance for English and other language instruction.',
+      description: t('program_language_scholarship_text'),
       imageIcon: Globe,
       audience: [
-        'High-potential students with clear academic and professional goals',
-        'Students seeking language training to unlock higher education opportunities'
+        t('program_language_scholarship_audience1'),
+        t('program_language_scholarship_audience2')
       ],
       eligibility: [
-        'Student demonstrated true financial need',
-        'Student showcased academic motivation to learn a foreign language',
-        'Student presented strong and relevant professional goals',
+        t('program_language_scholarship_eligibility1'),
+        t('program_language_scholarship_eligibility2'),
+        t('program_language_scholarship_eligibility3'),
       ],
       benefits: [
-        'Foreign language skill certificate from a recognized language institution',
+        t('program_language_scholarship_benefits'),
       ],
       process: [
-        'Online Registration',
-        'Interview',
-        'Selection Committee Decision',
-        'Class Enrollment',
-        'Trial Period',
+        t('program_language_scholarship_process1'),
+        t('program_language_scholarship_process2'),
+        t('program_language_scholarship_process3'),
+        t('program_language_scholarship_process4'),
+        t('program_language_scholarship_process35'),
       ],
     },
     {
-      title: 'University Scholarship Program',
+      title: t('program_university_scholarship_section'),
       icon: GraduationCap,
-      description: 'Partial or full tuition assistance, depending on need and available funding, to support students throughout their university studies.',
+      description: t('program_university_scholarship_text'),
       imageIcon: University,
       audience: [
-        'Students pursuing undergraduate degrees, with clear academic and professional goals', 
-        'Students facing financial barriers to enrollment or continuation',
+        t('program_university_scholarship_audience1'), 
+        t('program_university_scholarship_audience2'),
       ],
       eligibility: [
-        'Student demonstrated true financial need',
-        'Student demonstrated strong academic performance and a consistent commitment to excellence in their studies',
-        'Student presented a clear professional plan',
+        t('program_university_scholarship_eligibility1'),
+        t('program_university_scholarship_eligibility2'),
+        t('program_university_scholarship_eligibility3'),
       ],
       benefits: [
-        'University diploma from a recognized university in Cartagena'
+        t('program_university_scholarship_benefits')
       ],
       process: [
-        'Online Enrollment',
-        'Interview',
-        'Select Committee Decision',
-        'University Enrollment',
-        'Tuition payment',
+        t('program_university_scholarship_process1'),
+        t('program_university_scholarship_process2'),
+        t('program_university_scholarship_process3'),
+        t('program_university_scholarship_process4'),
+        t('program_university_scholarship_process5'),
       ],
     },
   ];
 
   const communitiesImpacted = [
     {
-      name: 'Tierra Bomba',
-      story: 'Tierra Bomba is a close-knit island community near Cartagena, Colombia, rooted in fishing and cultural traditions. Ongoing local efforts focus on expanding opportunities for young people.',
+      name: t('community_tierra_bomba_section'),
+      story: t('community_tierra_bomba_text'),
       image: tierrabombaImg,
     },
     {
-      name: 'La Boquilla',
-      story: 'La Boquilla is an Afro-Caribbean coastal community north of Cartagena, known for its fishing heritage and cultural traditions. Local initiatives in sustainable tourism help strengthen economic opportunities for residents.',
+      name: t('community_boquilla_section'),
+      story: t('community_boquilla_text'),
       image: laboquillaImg,
     },
     {
-      name: 'Villas de Aranjuez',
-      story: 'Villas de Aranjuez is a working-class neighborhood in Cartagena’s Barrios Unidos area. Recent improvements in infrastructure and community services support ongoing efforts to expand access to health, education, and social support.',
+      name: t('community_aranjuez_section'),
+      story: t('community_aranjuez_text'),
       image: villaaranjuezImg,
     },
     {
-      name: 'Olaya Herrera',
-      story: 'Olaya Herrera is a large neighborhood in southeast Cartagena known for its community cohesion and cultural vibrancy. The area faces challenges such as limited resources, and high violence.',
+      name: t('community_olaya_section'),
+      story: t('community_olaya_text'),
       image: olayaherreraImg,
     },
   ];
 
-  const successStories = [
-    {
-      name: 'Itamar Sofia Rodríguez Gonzalez',
-      program: 'University Scholarship',
-      story: 'To be update for Itamar',
-      image: itamarImage,
-      outcome: 'Law Program',
-    },
-    {
-      name: 'Jose Rodríguez Cervantes',
-      program: 'Language Scholarship & University Scholarship',
-      story: 'To be updated for Jose',
-      image: 'https://images.unsplash.com/photo-1758270704025-0e1a1793e1ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwc3R1ZGVudHMlMjBzdHVkeWluZ3xlbnwxfHx8fDE3NjEwMzcxNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      outcome: 'Finance and International Business Program',
-    },
-    {
-      name: 'Arniela Meza Valiente',
-      program: 'Language Scholarship & University Scholarship',
-      story: 'To be updated for Arniela',
-      image: 'https://images.unsplash.com/photo-1579378536395-cdb09ff8e2d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDb2xvbWJpYW4lMjBzdHVkZW50cyUyMGVkdWNhdGlvbnxlbnwxfHx8fDE3NjEwNzcyMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      outcome: 'Tourism Program',
-    },
-  ];
 
   return (
     <div>
@@ -127,10 +107,10 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
       <section className="bg-primary text-primary-foreground py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="mb-6 text-center font-bold text-2xl">
-                  Our Programs
+                  {t('nav_programs')}
               </h2>
           <p className="max-w-3xl mx-auto">
-            ALZA Foundation supports students by removing financial barriers to education through targeted scholarship programs. Our programs focus on language preparation and university access for high-potential students from underserved communities in Colombia.
+            {t('program_mission')}
           </p>
         </div>
       </section>
@@ -139,10 +119,10 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
       <section className="py-8 bg-muted">
         <div className="max-w-7x1 mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-6 text-center font-bold text-2xl"> 
-            Our Approach to Impact
+            {t('program_approach')}
           </h2>
           <p className="max-w-6x3 text-center mx-auto">
-            ALZA Foundation focuses on long-term educational access rather than one-time assistance. By supporting students at critical points in their educational journey, our programs aim to reduce structural barriers and expand opportunities for academic success.
+            {t('program_approach_text')}
           </p>
         </div>
       </section>
@@ -166,7 +146,7 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
 
                 <div className="space-y-6">
                   <div>
-                      <h3 className="mb-3">Audience</h3>
+                      <h3 className="mb-3">{t('program_audience_title')}</h3>
                       <ul className="space-y-2">
                         {program.audience.map((item, i) => (
                           <li key={i} className="flex items-start gap-2">
@@ -178,7 +158,7 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
                     </div>
 
                     <div>
-                      <h3 className="mb-3">Eligibility Criteria</h3>
+                      <h3 className="mb-3">{t('program_eligibility_title')}</h3>
                       <ul className="space-y-2">
                         {program.eligibility.map((item, i) => (
                           <li key={i} className="flex items-start gap-2">
@@ -190,7 +170,7 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
                     </div>
 
                    <div>
-                      <h3 className="mb-3">Program Benefits</h3>
+                      <h3 className="mb-3">{t('program_benefits_title')}</h3>
                       <ul className="space-y-6">
                         {program.benefits.map((item, i) => (
                           <li key={i} className="flex items-start gap-2">
@@ -202,7 +182,7 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
                     </div>
 
                   <Button onClick={() => onNavigate('student-portal')}>
-                    Apply Now
+                    {t('nav_apply-now')}
                     <ArrowRight className="ml-2" size={18} />
                   </Button>
                 </div>
@@ -211,7 +191,7 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
 
             <Card className="mt-8">
               <CardHeader>
-                <CardTitle className="font-bold">Application Process</CardTitle>
+                <CardTitle className="font-bold">{t('program_application_title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-5 gap-4">
@@ -235,10 +215,10 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
             <Award className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4" size={32} />   
-            <br/>Student Selection Process
+            <br/>{t('program_selection_title')}
           </h2>
           <p className="max-w-4x1 text-center mx-auto">
-            Students are selected through an application process that considers <b>financial need</b>, <b> motivation</b>, and <b>alignment with program goals</b>. Selection decisions are made with the goal of maximizing educational impact while ensuring equitable access.
+            {t('program_selection_text1')} <b>{t('program_selection_text2')}</b>, <b> {t('program_selection_text3')}</b>{t('program_selection_text4')} <b>{t('program_selection_text5')}</b>{t('program_selection_text6')}
           </p>
         </div>
       </section>
@@ -247,7 +227,7 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
       <section className="py-16 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Institutions Our Scholars Attend
+                  {t('program_institutions_section')}
               </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="flex flex-col items-center text-center">
@@ -286,7 +266,7 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Communities We Serve
+                  {t('community_section_title')}
               </h2>
           <div className="grid md:grid-cols-4 gap-8">
             {communitiesImpacted.map((story, index) => (
@@ -312,30 +292,30 @@ export function ProgramsPage({ onNavigate }: ProgramsPageProps) {
       <section className="py-10 bg-muted">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12 divide-x divide-black">
           <div  className="px-10 py-6">
-            <h2 className="mb-4 text-center font-bold">STUDENTS <br/>Ready to Apply?</h2>
+            <h2 className="mb-4 text-center font-bold">{t('program_cta_student_section')}<br/>{t('program_cta_student_call')}</h2>
             <p className="text-muted-foreground mb-8">
-              Take the first step towards transforming your future. Our scholarship programs are designed to support you all the way.
+              {t('program_cta_student_text')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" onClick={() => onNavigate('student-portal')}>
-                  Start Your Application
+                  {t('program_cta_student_start')}
                 </Button>
                 <Button size="lg" variant="outline" onClick={() => onNavigate('contact')}>
-                  Have Questions? Contact Us
+                  {t('program_cta_student_questions')}
                 </Button>
             </div>
           </div>
           <div className="px-10 py-6">
-              <h2 className="mb-4 text-center font-bold">DONORS <br/>Interested in supporting or learning more about out Programs?</h2>
+              <h2 className="mb-4 text-center font-bold">{t('program_cta_donor_section')}<br/>{t('program_cta_donor_call')}</h2>
               <p className="text-muted-foreground mb-8">
-              Your support can create lasting change for a student and their community.
+              {t('program_cta_donor_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" onClick={() => onNavigate('get-involved')}>
-                  Support Our Programs
+                  {t('program_cta_donor_support')}
                 </Button>
                 <Button size="lg" variant="outline" onClick={() => onNavigate('contact')}>
-                  Contact Us
+                  {t('footer_contact')}
                 </Button>
               </div>
             </div>

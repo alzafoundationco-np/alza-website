@@ -10,47 +10,50 @@ import img5 from "figma:asset/8881e1a3a99145ac7610a512b5248cc96e189499.png";
 import img6 from "figma:asset/dc13cb18f3c0ed87ec2614285f16480d58d29502.png";
 import danielaImg from "figma:asset/0263f7f40c2bc666e9bf62859aef2e263ca0054a.png";
 import itamarImg from "@/assets/5d37cdcd8ee043d74224177b6cab23de89e1a4ab.png";
+import { useTranslation } from 'react-i18next';
 
 interface HomePageProps {
   onNavigate: (page: string) => void;
 }
 
 export function HomePage({ onNavigate }: HomePageProps) {
+  const { t } = useTranslation();
+
   const stats = [
-    { label: 'Total Students Supported', value: '9', icon: Users },
-    { label: 'Active University Scholarships', value: '7', icon: GraduationCap },
-    { label: 'Active Language Scholarships', value: '2', icon: Globe },
+    { label: t('metric_total-students-supported'), value: '9', icon: Users },
+    { label: t('metric_active-university-scholarships'), value: '7', icon: GraduationCap },
+    { label: t('metric_active-language-scholarships'), value: '4', icon: Globe },
   ];
 
   const recentUpdates = [
     {
-      title: '501(c)3 Approval',
-      date: 'December 15, 2025',
-      description: 'ALZA Foundation, Inc. was certified 501(c)3 nonprofit by the IRS. U.S. donors can deduct any contributions made after November 10th, under IRC Section 170.',
+      title: t('update_approval'),
+      date: t('update_date_approval'),
+      description: t('update_text_approval'),
     },
     {
-      title: 'Incorporation',
-      date: 'November 10, 2025',
-      description: 'ALZA Foundation, Inc. was incorporated to the North Carolina state.',
+      title: t('update_incorporation'),
+      date: t('update_date_incorporation'),
+      description: t('update_text_incorporation'),
     },
     {
-      title: 'First Board Meeting',
-      date: 'October 25, 2025',
-      description: 'Our Board of Directors held the first Board Meeting to officially launch the ALZA Foundation non-profit.',
+      title: t('update_board'),
+      date: t('update_date_board'),
+      description: t('update_text_board'),
     },
   ];
 
   const testimonials = [
     {
-      name: 'Daniela Meza Valiente',
-      role: 'University Scholarship Recipient',
-      quote: 'La Beca Universitaria de la Fundación ALZA representa una gran oportunidad para hacer realidad mis sueños. Gracias a este apoyo, podría continuar mis estudios sin que las limitaciones económicas sean un obstáculo. Esta beca me permitiría concentrarme plenamente en mi formación, adquirir materiales de estudio y participar en actividades que fortalezcan mis habilidades como futura licenciada en educación. También me motivaría a seguir esforzándome para alcanzar la excelencia y devolver, con mi trabajo y dedicación, la confianza que la Fundación deposita en jóvenes como yo.',
+      name: t('daniela_full_name'),
+      role: t('testimonial_scholarship_type_uni'),
+      quote: t('testimonial_daniela'),
       image: danielaImg,
     },
     {
-      name: 'Itamar Sofia Rodríguez Gonzalez',
-      role: 'Language & University Scholarship Recipient',
-      quote: 'Gracias a la beca que recibí, pude acceder a clases de inglés que me han abierto puertas increíbles, tanto en mi carrera académica como en mi vida personal. La universidad ha sido un desafío, pero también una experiencia increíble que me ha permitido crecer como persona y profesional. He podido desarrollar habilidades valiosas, ampliar mi red de contactos y descubrir nuevas pasiones. Estoy agradecido por esta oportunidad y espero que más estudiantes puedan beneficiarse de este programa y alcanzar sus objetivos.',
+      name: t('itamar_full_name'),
+      role: t('testimonial_scholarship_type_lang-uni'),
+      quote: t('testimonial_itamar'),
       image: itamarImg,
     },
   ];
@@ -66,13 +69,13 @@ export function HomePage({ onNavigate }: HomePageProps) {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="mb-6 text-5xl md:text-6xl font-bold text-secondary">Empowering Dreams Through Education</h1>
+          <h1 className="mb-6 text-5xl md:text-6xl font-bold text-secondary">{t('alza_motto')}</h1>
           <p className="mb-8 max-w-2xl mx-auto">
-          ALZA Foundation provides scholarships for language learning and university education to students from underserved communities, in Colombia.  
+          {t('header_mission')}  
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" onClick={() => onNavigate('get-involved')} className="px-8 py-6 text-lg">
-              Donate Now
+              {t('donate-now')}
             </Button>
           </div>
         </div>
@@ -83,15 +86,15 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="mb-6 text-center font-bold text-2xl">
-              What We Do
+              {t('home_what-we-do')}
             </h2>
             <p className="mb-4 max-w-2xl mx-auto text-muted-foreground font-bold text-lg">
-              Expanding access to higher education for high-potential students in Colombia  
+              {t('footer_mission')} 
             </p>
             <p className="max-w-4xl mx-auto text-muted-foreground">
-              At ALZA Foundation, we support high-potential students from underserved communities in Colombia who face financial barriers to accessing higher education by providing targeted scholarship programs. 
+              {t('Home_action-description_1')} 
             </p>
-            <p className="max-w-4xl mx-auto text-muted-foreground">By investing in education, leadership, and personal growth, we help students build the skills and confidence needed to create lasting impact in their lives and communities.</p>
+            <p className="max-w-4xl mx-auto text-muted-foreground">{t('home_action-description-2')}</p>
           </div>
           
           {/* Three Pillars Grid */}
@@ -101,8 +104,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
                   <Globe size={32} />
                 </div>
-                <h3 className="mb-3 font-bold">Language Scholarships</h3>
-                <p className="text-muted-foreground">Funding for English and other language instruction to prepare students for academic and professional opportunities.</p>
+                <h3 className="mb-3 font-bold">{t('home_program_card_language')}</h3>
+                <p className="text-muted-foreground">{t('home_program_card_language_text')}</p>
               </CardContent>
             </Card>
             
@@ -111,8 +114,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
                   <GraduationCap size={32} />
                 </div>
-                <h3 className="mb-3 font-bold">University Education Support</h3>
-                <p className="text-muted-foreground">Financial assistance for students pursuing undergraduate degrees.</p>
+                <h3 className="mb-3 font-bold">{t('home_program_card_university')}</h3>
+                <p className="text-muted-foreground">{t('home_program_card_university_text')}</p>
               </CardContent>
             </Card>
             
@@ -121,8 +124,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
                   <Heart size={32} />
                 </div>
-                <h3 className="mb-3 font-bold">Student Guidance & Support</h3>
-                <p className="text-muted-foreground">Academic guidance to help students succeed throughout their studies.</p>
+                <h3 className="mb-3 font-bold">{t('home_program_card_mentorship')}</h3>
+                <p className="text-muted-foreground">{t('home_program_card_mentorship_text')}</p>
               </CardContent>
             </Card>
           </div>
@@ -144,7 +147,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Our Current Status
+                  {t('home_metric_section')}
               </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
@@ -164,7 +167,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-16 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Recent Updates
+                  {t('home_update_section')}
               </h2>
           <div className="overflow-x-auto pb-4">
             <div className="flex gap-6 min-w-max justify-center">
@@ -186,7 +189,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Student Voices
+                  {t('home_testimonial_section')}
               </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -215,10 +218,10 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-12 bg-muted">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-6 text-center font-bold text-2xl">
-            Stay Connected
+            {t('home_newsletter_section')}
           </h2>
           <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter to get notified about new events, student stories, and impact updates from ALZA Foundation.
+            {t('home_newsetter_text')}
           </p>
           <div className="relative w-full" style={{ height: '270px' }}>
             <iframe 
@@ -235,7 +238,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="max-w-6x3 text-center mx-auto">
-            ALZA Foundation, Inc. is a U.S.-registered 501(c)(3) nonprofit organization supporting education access in Colombia.
+            {t('legal_statement')}
           </p>        
         </div>
       </section>
@@ -243,17 +246,17 @@ export function HomePage({ onNavigate }: HomePageProps) {
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="mb-4">Make a Difference Today</h2>
+          <h2 className="mb-4">{t('home_cta_section')}</h2>
           <p className="mb-8">
-            Your support can transform a student's life and create lasting change in their community.
+            {t('home_cta_text')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" onClick={() => onNavigate('get-involved')}>
-              Support a Student
+              {t('home_cta_donation')}
               <ArrowRight className="ml-2" size={20} />
             </Button>
             <Button size="lg" variant="outline" className="border-primary-foreground text-black hover:bg-primary-foreground/10" onClick={() => onNavigate('about')}>
-              Explore our Programs
+              {t('home_cta_programs')}
             </Button>
           </div>
         </div>

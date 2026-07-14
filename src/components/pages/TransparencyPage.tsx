@@ -3,12 +3,15 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, Legend, ComposedChart } from 'recharts';
 import { FileText, Download, Award, DollarSign, ChevronRight,CircleSmall, Dot } from 'lucide-react';
 import { Button } from '../ui/button';
+import { useTranslation } from 'react-i18next';
 
 interface TransparencyPageProps {
   onNavigate: (page: string) => void;
 }
 
 export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
+  const { t } = useTranslation();
+
   const studentUniversitySupportData = [
     { year: '2023', students: 2, cost: 3342.08 },
     { year: '2024', students: 2, cost: 1751.39 },
@@ -27,19 +30,19 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
   const annualReports = [
     {
       year: '2025',
-      title: 'Annual Impact Report 2025',
-      type: 'Impact Report',
+      title: t('annual-impact-report-2025'),
+      type: t('impact-report'),
       size: '1.9 MB',
     },
     {
       year: '2025',
-      title: 'Financial Statement 2025',
-      type: 'Financials',
+      title: t('financial-statement-2025'),
+      type: t('financials'),
       size: '1.4 MB',
     },
   ];
 
-  const grantAchievements = [
+  /*const grantAchievements = [
     {
       funder: 'Fundación Santo Domingo',
       amount: '$150,000',
@@ -74,30 +77,30 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
     'Fulbright Commission',
     'Individual Donor Circle ($10,000+)',
     'Corporate Partners Coalition',
-  ];
+  ];*/
 
   const expenseRatioData = [
-    { name: 'Program Services', value: 93.7, color: '#030213' },
-    { name: 'Administrative', value: 6.3, color: '#00C49F' },
+    { name: t('program-services'), value: 93.7, color: '#030213' },
+    { name: t('administrative'), value: 6.3, color: '#00C49F' },
   ];
 
   const expenseTypeData = [
-    { name: 'Tax/Legal', value: 6.3, color: '#FCD116' },
-    { name: 'University Tuition', value: 93.7, color: '#CE1126' },
+    { name: t('tax-legal'), value: 6.3, color: '#FCD116' },
+    { name: t('university-tuition'), value: 93.7, color: '#CE1126' },
   ];
 
-  const kpis = [
+  /*const kpis = [
     { metric: 'Number of students served', value: '5', target: '5', status: 'On Track' },
     { metric: 'Number of scholarship awarded', value: '8', target: '6', status: 'Exceeding' },
     { metric: 'Program Expense Ratio', value: '93.7%', target: '90%', status: 'Exceeding' },
-  ];
+  ];*/
 
   const financialSummary = [
-    { category: 'Total Revenue', amount: '$7,080' },
-    { category: 'Total Expenses', amount: '$5,400' },
-    { category: 'Program Expenses', amount: '93.7%  -  $5,062' },
-    { category: 'Administrative Expenses', amount: '6.3%  -  $338.00' },
-    { category: 'Fundraising Expenses', amount: '0%  -  $0.00' },
+    { category: t('total-revenue'), amount: '$7,080' },
+    { category: t('total-expenses'), amount: '$5,400' },
+    { category: t('program-expenses'), amount: '93.7%  -  $5,062' },
+    { category: t('administrative-expenses'), amount: '6.3%  -  $338.00' },
+    { category: t('fundraising-expenses'), amount: '0%  -  $0.00' },
   ];
 
   return (
@@ -106,10 +109,10 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
       <section className="bg-primary text-primary-foreground py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="mb-6 text-center font-bold text-2xl">
-                  Transparency & Accountability
+                  {t('transparency-title')}
               </h2>
           <p className="max-w-3xl mx-auto">
-            We are committed to transparency and responsible stewardship of every donation. Explore our financial reports, impact data, and organizational accountability.
+            {t('transparency_presentation')}
           </p>
         </div>
       </section>
@@ -118,10 +121,10 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
       <section className="py-8 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Legal Status
+                  {t('legal-status')}
           </h2>
           <p className="max-w-6x3 text-center mx-auto">
-            ALZA Foundation, Inc. is a U.S.-registered 501(c)(3) nonprofit organization, governed by a Board of Directors, which supports education access in Colombia.
+            {t('alza-legal')}
           </p>        
         </div>
       </section>
@@ -130,17 +133,17 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Financial Overview (Oct-Dec 2025)
+                  {t('financial_overview')}
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>
-                <CardTitle><b>Expense Overview</b></CardTitle>
+                <CardTitle><b>{t('expense-overview')}</b></CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-center mb-2"><b>Expense Allocation</b></h3>
+                    <h3 className="text-center mb-2"><b>{t('expense-allocation')}</b></h3>
                     <ResponsiveContainer width="100%" height={320}>
                       <PieChart>
                         <Pie
@@ -162,7 +165,7 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
                       </PieChart>
                     </ResponsiveContainer>
                     <p className="text-center text-muted-foreground text-sm mt-2">
-                      94 cents of every dollar goes directly to student programs
+                      {t('expenses_explanation')}
                     </p>
                   </div>
 
@@ -189,19 +192,19 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
                       </PieChart>
                     </ResponsiveContainer>
                     <p className="text-center text-muted-foreground text-sm mt-2">
-                      Breakdown of program expenses by type
+                      {t('graph_breakdown')}
                     </p>
                   </div>
                 </div>
                 <p className="text-center text-muted-foreground italic text-sm mt-6">
-                  ALZA Foundation, Inc. is proudly run by an all-volunteer board of directors who serve without compensation.
+                  {t('alza_volunteer_statement')}
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle><b>Financial Summary</b></CardTitle>
+                <CardTitle><b>{t('financial-summary')}</b></CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -222,7 +225,7 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
           
               <Card>
                 <CardHeader>
-                  <CardTitle>Combined Costs of <b>University</b> Scholarships Over Time</CardTitle>
+                  <CardTitle>{t('graph_combined1')} <b>{t('graph_student_university2')}</b> {t('scholarships')} {t('over_time')}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ResponsiveContainer width="96%" height={300}>
@@ -254,7 +257,7 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
 
                <Card>
                 <CardHeader>
-                  <CardTitle>Combined Costs of <b>Foreign Language Class</b> Scholarships Over Time</CardTitle>
+                  <CardTitle>{t('graph_combined1')} <b>{t('foreign-language-class')}</b> {t('scholarships')} {t('over_time')}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ResponsiveContainer width="96%" height={300}>
@@ -295,10 +298,10 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
               <FileText size={32} />
             </div>
             <h2 className="mb-12 text-center font-bold text-2xl">
-                  Annual Reports & Financial Statements
+                  {t('annual-reports-and-financial-statements')}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Download our comprehensive annual reports and financial statements.
+              {t('reports_financials_download')}
             </p>
           </div>
 
@@ -307,11 +310,11 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Year</TableHead>
-                    <TableHead>Document</TableHead>
-                    <TableHead>Type</TableHead>
-                    <TableHead>Size</TableHead>
-                    <TableHead>Action</TableHead>
+                    <TableHead>{t('year')}</TableHead>
+                    <TableHead>{t('document')}</TableHead>
+                    <TableHead>{t('type')}</TableHead>
+                    <TableHead>{t('size')}</TableHead>
+                    <TableHead>{t('action')}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -324,7 +327,7 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
                       <TableCell>
                         <Button variant="outline" size="sm">
                           <Download size={16} className="mr-2" />
-                          Coming soon
+                          {t('coming-soon')}
                         </Button>
                       </TableCell>
                     </TableRow>
@@ -380,13 +383,13 @@ export function TransparencyPage({ onNavigate }: TransparencyPageProps) {
       {/* Accountability Statement */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-6 text-center font-bold">Our Commitment to Transparency and Accountability</h2>
+          <h2 className="mb-6 text-center font-bold">{t('transparency_commitment')}</h2>
           <div className="space-y-4 text-primary-foreground/90">
             <p>
-              ALZA Foundation operates with the highest standards of financial accountability and programmatic transparency. We are committed to ensuring that every donation is used effectively and efficiently to support our students.
+              {t('transparency_commitment_text1')}
             </p>
             <p>
-              We believe in open communication with our donors, partners, and stakeholders. If you have any questions about our finances, programs, or governance, please don't hesitate to contact us.
+              {t('transparency_commitment_text2')}
             </p>
           </div>
         </div>

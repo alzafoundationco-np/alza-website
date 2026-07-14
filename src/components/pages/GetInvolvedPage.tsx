@@ -20,6 +20,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { toast } from "sonner@2.0.3";
+import { useTranslation } from 'react-i18next';
 
 interface GetInvolvedPageProps {
   onNavigate: (page: string) => void;
@@ -28,6 +29,8 @@ interface GetInvolvedPageProps {
 export function GetInvolvedPage({
   onNavigate,
 }: GetInvolvedPageProps) {
+  const { t } = useTranslation();
+
   const [partnershipForm, setPartnershipForm] = useState({
     name: "",
     organization: "",
@@ -38,36 +41,36 @@ export function GetInvolvedPage({
 
   const donationTiers = [
     {
-      name: "Crowdfunding",
-      amount: "Zeffy",
+      name: t('donation_type_crowdfunding'),
+      amount: t('donation_platform_zeffy'),
       preferred: true,
       benefits: [
-        "No transaction fees  --  Note: Zeffy adds an optional platform tip at checkout. To opt out, select 'Other' under the tip section and enter $0.",
-        "One-time/Recurring payment",
-        "Credit/Debit card",
-        "Tax receipt",
+        t('donation_zeffy_benefit1'),
+        t('donation_zeffy_benefit2'),
+        t('donation_zeffy_benefit3'),
+        t('donation_zeffy_benefit4'),
       ],
     },
     {
-      name: "Direct Transfer",
-      amount: "Zelle",
+      name: t('donation_type_transfer'),
+      amount: t('donation_platform_zelle'),
       preferred: false,
       benefits: [
-        "No transaction fees",
-        "One-time/Recurring payment",
-        "Instant transfer",
-        "Tax receipt",
+        t('donation_zelle_benefit1'),
+        t('donation_zelle_benefit2'),
+        t('donation_zelle_benefit3'),
+        t('donation_zelle_benefit4'),
       ],
     },
   ];
 
   const fundraisingGoals = [
     {
-      name: "First Year Fundraising Campaign",
+      name: t('donation_campaign_title'),
       target: 28000,
-      current: 8722.30,
+      current: 15724.28,
       description:
-        "Support 10 students with full university scholarship and foreign language courses in 2026.",
+        t('donation_campaign_text'),
     },
   ];
 
@@ -77,11 +80,11 @@ export function GetInvolvedPage({
       <section className="bg-primary text-primary-foreground py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="mb-6 text-center font-bold text-2xl">
-                  Donate
+                  {t('nav_donate')}
               </h2>
           <p className="max-w-3xl mx-auto">
-            Your support helps high-potential students in Colombia access language learning and higher education.
-            <br/>ALZA Foundation is a U.S.-registered 501(c)(3) nonprofit; donations are tax-deductible.
+            {t('donation_presentation1')}
+            <br/>{t('donation_presentation2')}
           </p>
         </div>
       </section>
@@ -90,35 +93,35 @@ export function GetInvolvedPage({
       <section className="py-8 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Impact of your donation
+                  {t('donation_impact_title')}
               </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Card>
               <CardContent className="p-6 text-center">
-                <h3 className="text-primary mb-2">$50</h3>
-                <p className="text-muted-foreground">Covers costs of one exam</p>
+                <h3 className="text-primary mb-2">{t('donation_impact1_title')}</h3>
+                <p className="text-muted-foreground">{t('donation_impact1_text')}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6 text-center">
-                <h3 className="text-primary mb-2">$350</h3>
-                <p className="text-muted-foreground">Covers language course tuition for one level</p>
+                <h3 className="text-primary mb-2">{t('donation_impact2_title')}</h3>
+                <p className="text-muted-foreground">{t('donation_impact2_text')}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6 text-center">
-                <h3 className="text-primary mb-2">$2,500</h3>
-                <p className="text-muted-foreground">Funds a full-year university scholarship</p>
+                <h3 className="text-primary mb-2">{t('donation_impact3_title')}</h3>
+                <p className="text-muted-foreground">{t('donation_impact3_text')}</p>
               </CardContent>
             </Card>
           </div>
         </div>
         <div className="py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Button size="lg" onClick={() => {window.open("https://www.zeffy.com/en-US/donation-form/alza-transform-lives-through-education-in-cartagena", "_blank")}} className="px-8 py-6 text-lg">
-              Donate Now
+              {t('donate-now')}
             </Button>
             <p className="text-xs text-muted-foreground mt-6 max-w-md mx-auto">
-              Note: Zeffy adds an optional platform tip at checkout. To opt out, select "Other" under the tip section and enter $0.
+              {t('donation_zeffy_note')}
             </p>
         </div>
       </section>
@@ -131,12 +134,12 @@ export function GetInvolvedPage({
               <Heart size={32} />
             </div>
             <h2 className="mb-12 text-center font-bold text-2xl">
-                  Donation Options
+                  {t('donation-options')}
               </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Your financial support directly impacts students' lives. <br/>Choose a giving method that works for you.
-              <br/><b> All transactions are secure.</b> 
-              <br/>ALZA Foundation is a U.S.-registered 501(c)(3) nonprofit, and your donation is tax-deductible. Please make sure to include your email address in the payment note to receive a tax receipt.
+              {t('donation_options_text1')} <br/>{t('donation_options_text2')}
+              <br/><b> {t('donation_options_text3')}</b> 
+              <br/>{t('donation_options_text4')}
             </p>
           </div>
 
@@ -152,7 +155,7 @@ export function GetInvolvedPage({
                   <CardTitle>{tier.name}</CardTitle>
                   <p className="text-2xl">
                     {tier.amount}
-                    {tier.preferred && <span className="text-green-600"> - Preferred</span>}
+                    {tier.preferred && <span className="text-green-600"> {t('donation_zeffy_preferred')}</span>}
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -202,11 +205,11 @@ export function GetInvolvedPage({
       <section className="py-8 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="max-w-6x3 text-center mx-auto font-bold">
-            Please find all the information on how we manage our received donations.
+            {t('donation_law_statement')}
           </p> 
           <div className="py-5 flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" onClick={() => onNavigate('transparency')} className="px-8 py-6 text-lg">
-              Transparency Page
+              {t('transparency-page')}
             </Button>
           </div>
         </div>
@@ -216,7 +219,7 @@ export function GetInvolvedPage({
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Current Fundraising Campaigns
+                  {t('donation_campaign_section')}
               </h2>
           <div className="flex flex-col items-center gap-8">
             {fundraisingGoals.map((goal, index) => (
@@ -231,10 +234,10 @@ export function GetInvolvedPage({
                   <div className="mb-4">
                     <div className="flex justify-between mb-2">
                       <span>
-                        ${goal.current.toLocaleString()} raised
+                        ${goal.current.toLocaleString()} {t('donation_status_raised')}
                       </span>
                       <span className="text-muted-foreground">
-                        ${goal.target.toLocaleString()} goal
+                        ${goal.target.toLocaleString()} {t('donation_goal')}
                       </span>
                     </div>
                     <Progress
@@ -245,7 +248,7 @@ export function GetInvolvedPage({
                     className="w-full"
                     onClick={() => window.open("https://www.zeffy.com/en-US/donation-form/alza-transform-lives-through-education-in-cartagena", "_blank")}
                   >
-                    Contribute to This Campaign
+                    {t('donation_campaign_contribution')}
                   </Button>
                 </CardContent>
               </Card>
@@ -258,22 +261,22 @@ export function GetInvolvedPage({
       <section className="py-16 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Other Ways to Give
+                  {t('donation_other')}
               </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <Card>
               <CardContent className="p-6">
                 <CheckCircle className="text-primary mb-4" size={32} />
-                <h3 className="mb-3">Wire Transfer</h3>
+                <h3 className="mb-3">{t('donation_wire')}</h3>
                 <p className="text-muted-foreground mb-4">
-                  For large donations, wire transfers may be more convenient. Contact us for bank details.
+                  {t('donation_wire_text')}
                 </p>
                 <Button 
                   variant="outline" 
                   className="w-full"
                   onClick={() => onNavigate('contact')}
                 >
-                  Contact us to get the Bank information
+                  {t('donation_wire_info')}
                 </Button>
               </CardContent>
             </Card>
@@ -281,16 +284,16 @@ export function GetInvolvedPage({
             <Card>
               <CardContent className="p-6">
                 <CheckCircle className="text-primary mb-4" size={32} />
-                <h3 className="mb-3">Check or Money Order</h3>
+                <h3 className="mb-3">{t('donation_check')}</h3>
                 <p className="text-muted-foreground mb-4">
-                  Mail checks payable to "ALZA Foundation" to our Charlotte, NC office address.
+                  {t('donation_check_text')}
                 </p>
                 <Button 
                   variant="outline" 
                   className="w-full"
                   onClick={() => onNavigate('contact')}
                 >
-                  Contact us to get the address
+                  {t('donation_text_contact')}
                 </Button>
               </CardContent>
             </Card>

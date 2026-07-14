@@ -7,8 +7,11 @@ import { Button } from '../ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { Mail, MapPin, Clock, Facebook, Twitter, InstagramIcon, Linkedin } from 'lucide-react';
 import { toast } from 'sonner@2.0.3';
+import { useTranslation } from 'react-i18next';
 
 export function ContactPage() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -37,10 +40,10 @@ export function ContactPage() {
       <section className="bg-primary text-primary-foreground py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="mb-6 text-center font-bold text-2xl">
-                  Get In Touch
+                  {t('get-in-touch')}
               </h2>
           <p className="max-w-3xl mx-auto">
-            We welcome inquiries from partners, funders, and community members.
+            {t('contact_welcome')}
           </p>
         </div>
       </section>
@@ -58,9 +61,9 @@ export function ContactPage() {
                       <MapPin className="text-primary" size={20} />
                     </div>
                     <div>
-                      <h4 className="mb-2 font-bold">Name</h4>
+                      <h4 className="mb-2 font-bold">{t('name')}</h4>
                       <p className="text-muted-foreground">
-                        ALZA Foundation, Inc.
+                        {t('alza_full_name')}
                       </p>
                     </div>
                   </div>
@@ -74,7 +77,7 @@ export function ContactPage() {
                       <MapPin className="text-primary" size={20} />
                     </div>
                     <div>
-                      <h4 className="mb-2 font-bold">Address & Country of Registration</h4>
+                      <h4 className="mb-2 font-bold">{t('address_title')}</h4>
                       <p className="text-muted-foreground">
                         9300 Harris Glen Dr, NC 28269, USA
                       </p>
@@ -90,7 +93,7 @@ export function ContactPage() {
                       <Mail className="text-primary" size={20} />
                     </div>
                     <div>
-                      <h4 className="mb-2 font-bold">Email</h4>
+                      <h4 className="mb-2 font-bold">{t('email_title')}</h4>
                       <a href="mailto:eroseau@alzaeducation.org" className="text-primary hover:underline">
                         info@alzaeducation.org
                       </a>
@@ -123,7 +126,7 @@ export function ContactPage() {
                       <MapPin className="text-primary" size={20} />
                     </div>
                     <div>
-                      <h4 className="mb-2 font-bold">Primary Area of Work</h4>
+                      <h4 className="mb-2 font-bold">{t('area_work')}</h4>
                       <p className="text-muted-foreground">
                         Cartagena, Colombia
                       </p>
@@ -137,13 +140,13 @@ export function ContactPage() {
             <div className="md:col-span-2 h-full">
               <Card className="h-full flex flex-col">
                 <CardHeader>
-                  <CardTitle><b>Send Us a Message</b></CardTitle>
+                  <CardTitle><b>{t('send_message')}</b></CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1">
                   <form onSubmit={handleSubmit} className="space-y-6 h-full flex flex-col justify-between">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="name">Full Name *</Label>
+                        <Label htmlFor="name">{t('full-name')} *</Label>
                         <Input
                           id="name"
                           value={formData.name}
@@ -152,7 +155,7 @@ export function ContactPage() {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="email">Email Address *</Label>
+                        <Label htmlFor="email">{t('email-address')} *</Label>
                         <Input
                           id="email"
                           type="email"
@@ -165,7 +168,7 @@ export function ContactPage() {
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="phone">Phone Number</Label>
+                        <Label htmlFor="phone">{t('phone-number')}</Label>
                         <Input
                           id="phone"
                           value={formData.phone}
@@ -173,25 +176,25 @@ export function ContactPage() {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="subject">Subject *</Label>
+                        <Label htmlFor="subject">{t('subject')} *</Label>
                         <Select value={formData.subject} onValueChange={(value) => setFormData({ ...formData, subject: value })}>
                           <SelectTrigger>
                             <SelectValue placeholder="Select a subject" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="general">General Inquiry</SelectItem>
-                            <SelectItem value="scholarship">Scholarship Information</SelectItem>
-                            <SelectItem value="volunteer">Volunteer Opportunities</SelectItem>
-                            <SelectItem value="partnership">Partnership Inquiry</SelectItem>
-                            <SelectItem value="donation">Donation Question</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
+                            <SelectItem value="general">{t('subject_option1')}</SelectItem>
+                            <SelectItem value="scholarship">{t('subject_option2')}</SelectItem>
+                            <SelectItem value="volunteer">{t('subject_option3')}</SelectItem>
+                            <SelectItem value="partnership">{t('subject_option4')}</SelectItem>
+                            <SelectItem value="donation">{t('subject_option5')}</SelectItem>
+                            <SelectItem value="other">{t('subject_option6')}</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
                     </div>
 
                     <div>
-                      <Label htmlFor="message">Message *</Label>
+                      <Label htmlFor="message">{t('message')} *</Label>
                       <Textarea
                         id="message"
                         rows={12}
@@ -204,7 +207,7 @@ export function ContactPage() {
 
                     <Button type="submit" size="lg" className="w-full"
                       onClick={() => window.location.href = "mailto:alza.foundation.co@gmail.com"}>
-                      Send Message
+                      {t('send-message')}
                     </Button>
                   </form>
                 </CardContent>
@@ -218,7 +221,7 @@ export function ContactPage() {
       <section className="py-8 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="max-w-6x3 text-center mx-auto">
-            ALZA Foundation, Inc. is a U.S.-registered 501(c)(3) nonprofit organization, founded in 2025, supporting education access in Colombia. [EIN: 41-2526575]
+            {t('alza_full_presentation')}
           </p>        
         </div>
       </section>
@@ -227,39 +230,39 @@ export function ContactPage() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Frequently Asked Questions
+                  {t('faq')}
               </h2>
           <div className="space-y-4">
             <Card>
               <CardContent className="p-6">
-                <h4 className="mb-2">Is ALZA Foundation a 501(c)(3) nonprofit?</h4>
+                <h4 className="mb-2">{t('faq_question1')}</h4>
                 <p className="text-muted-foreground">
-                  Yes — ALZA Foundation is a public charity organization exempt under IRC Section 501(c)(3). Donors can deduct contributions they make to the foundation under IRC Section 170.
+                  {t('faq_answer1')}
                 </p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6">
-                <h4 className="mb-2">Are my donations tax-deductible?</h4>
+                <h4 className="mb-2">{t('faq_question2')}</h4>
                 <p className="text-muted-foreground">
-                  Yes — All donations made after our incorporation date (November 10th, 2025) are tax-deductible. Donors receive an emailed receipt for every contribution, which they can use when filing U.S. taxes.
+                  {t('faq_answer2')}
                 </p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6">
-                <h4 className="mb-2">How will my donation be used?</h4>
+                <h4 className="mb-2">{t('faq_question3')}</h4>
                 <p className="text-muted-foreground">
-                  Donations directly support our education and community programs, including: student scholarships, English-language education, mentorship and career readiness.<br/> Financial transparency is a priority, and we publish updates on how funds are allocated through our Newsletter.
-                  ALZA Foundation is committed to maintain their annual administrative costs below 10%.
+                  {t('faq_answer3-1')}<br/> {t('faq_answer3-2')}
+                  {t('faq_answer3-3')}
                 </p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6">
-                <h4 className="mb-2">Do you accept grant and partnership inquiries?</h4>
+                <h4 className="mb-2">{t('faq_question4')}</h4>
                 <p className="text-muted-foreground">
-                  Yes. We welcome inquiries from foundations and institutional partners aligned with our mission. For grant-related or partnership inquiries, please contact us directly at alza.foundation.co@gmail.com.
+                  {t('faq_answer4')} {t('email_info')}.
                 </p>
               </CardContent>
             </Card>

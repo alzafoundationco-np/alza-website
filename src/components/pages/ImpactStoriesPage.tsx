@@ -12,12 +12,15 @@ import img4 from "figma:asset/e3a3be76c2e9290d8287af36b91cbcabaeeb3359.png";
 import img5 from "figma:asset/8881e1a3a99145ac7610a512b5248cc96e189499.png";
 import yurleidisImg from "@/assets//yurleidis-screenshot.png";
 import joseImg from "@/assets/jose-screenshot.png";
+import { useTranslation } from 'react-i18next';
 
 interface ImpactStoriesPageProps {
   onNavigate: (page: string) => void;
 }
 
 export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
+  const { t } = useTranslation();
+
   const studentUniversitySupportData = [
     { year: '2023', students: 2 },
     { year: '2024', students: 2 },
@@ -34,9 +37,9 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
   ];
 
   const scholarshipConversionData = [
-    { name: 'Language Only', value: 2 },
-    { name: 'University Only', value: 3 },
-    { name: 'Language & University', value: 4 },
+    { name: t('impact_language_only'), value: 2 },
+    { name: t('impact_university_only'), value: 3 },
+    { name: t('impact_language_and_university'), value: 4 },
   ];
 
   const storyImages = [
@@ -76,25 +79,25 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
 
   const testimonials = [
     {
-      name: 'Itamar Sofia Rodríguez Gonzalez',
-      quote: 'Itamar was one of the first students to take part of the ALZA Foundation’s Scholarship programs. Her educational motivation led her to be accepted to the University Rafael Nunez where she is currently enrolled in a Law program with a focus on Criminal Law and Criminology. With support through the program, she strengthened her English language skills and became a summer English teacher in her community, Tierra Bomba. From Itamar: "La universidad ha sido un desafío, pero también una experiencia increíble que me ha permitido crecer como persona y profesional.',
+      name: t('itamar_full_name'),
+      quote: t('impact_testimonial_itamar'),
       image: itamarImage,
-      program: 'University Scholarship 2022',
-      outcome: 'Law - Specialization in Criminal Law and Criminology',
+      program: t('impact_itamar_scholarship'),
+      outcome: t('impact_itamar_path'),
     },
     {
-      name: 'Jose Rodríguez Cervantes',
-      quote: 'José is a highly studious and driven student supported by the ALZA Foundation. With remarkable discipline and determination, he taught himself English and achieved fluency in less than two years. His ambition, initiative, and commitment to self-improvement reflect the kind of perseverance that inspires those around him and positions him for continued success. From Jose: Este apoyo no es solo financiero, también me da esperanza y me recuerda que hay personas que creen en estudiantes como yo y eso significa más de lo que puedo explicar.',
+      name: t('jose_full_name'),
+      quote: t('impact_testimonial_jose'),
       image: joseImg,
-      program: 'Language and University Scholarship 2025',
-      outcome: 'Finance and International Business',
+      program: t('impact_jose_scholarship'),
+      outcome: t('impact_jose_path'),
     },
     {
-      name: 'Yurleidis Herrera Herrera',
-      quote: 'Yurleidis is one of the dedicated students supported by the ALZA Foundation. She was among the most studious students our founder had the privilege to teach, consistently demonstrating strong motivation, focus, and determination. Through her hard work and perseverance, she is successfully completing her university studies in Nursing to get prepared to serve as a pillar of strength and care within her community. From Yurleidis: Este apoyo no solo representa una contribución económica, sino también un voto de confianza en mi potencial y en mis sueños.',
+      name: t('yurleidis_full_name'),
+      quote: t('impact_testimonial_yurleidis'),
       image: yurleidisImg,
-      program: 'University Scholarship 2023',
-      outcome: 'Nursing - Specialization in Audit Nursing',
+      program: t('impact_yurleidis_scholarship'),
+      outcome: t('impact_yurleidis_path'),
     },
   ];
 
@@ -117,40 +120,17 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
   ];
 
   const areasServed = [
-    { name: 'La Boquilla', students: 3 },
-    { name: 'Tierra Bomba', students: 4 },
-    { name: 'Villas de Aranjuez', students: 1 },
-    { name: 'Olaya Herrera', students: 1 },
-  ];
-
-  const communitiesImpacted = [
-    {
-      name: 'Tierra Bomba',
-      story: 'Tierra Bomba is a close-knit island community just minutes from Cartagena, Colombia, known for its strong cultural roots, fishing traditions, and resilience amid economic challenges, with growing efforts to create better opportunities for its residents, especially youth.',
-      image: itamarImage,
-    },
-    {
-      name: 'La Boquilla',
-      story: 'La Boquilla is an Afro-Caribbean fishing neighborhood just north of Cartagena, known for its authentic coastal culture, calm beaches, and growing community-led sustainable tourism that highlights local history, nature, and traditions while strengthening opportunities for residents.',
-      image: 'https://images.unsplash.com/photo-1758270704025-0e1a1793e1ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwc3R1ZGVudHMlMjBzdHVkeWluZ3xlbnwxfHx8fDE3NjEwMzcxNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    },
-    {
-      name: 'Villas de Aranjuez',
-      story: 'Villas de Aranjuez is a working-class neighborhood in Cartagena’s Barrios Unidos area where residents are seeing recent improvements in infrastructure, services, and community spaces, alongside ongoing efforts to expand access to health, education, and social support within the community.',
-      image: 'https://images.unsplash.com/photo-1579378536395-cdb09ff8e2d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDb2xvbWJpYW4lMjBzdHVkZW50cyUyMGVkdWNhdGlvbnxlbnwxfHx8fDE3NjEwNzcyMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    },
-    {
-      name: 'Olaya Herrera',
-      story: 'Olaya Herrera is a large, long-standing neighborhood in southeast Cartagena known for its strong community spirit and cultural vibrancy despite facing deep-rooted challenges like poverty, limited services, and high levels of violence.',
-      image: 'https://images.unsplash.com/photo-1579378536395-cdb09ff8e2d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDb2xvbWJpYW4lMjBzdHVkZW50cyUyMGVkdWNhdGlvbnxlbnwxfHx8fDE3NjEwNzcyMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    },
+    { name: t('community_boquilla_section'), students: 3 },
+    { name: t('community_tierra_bomba_section'), students: 4 },
+    { name: t('community_aranjuez_section'), students: 1 },
+    { name: t('community_olaya_section'), students: 1 },
   ];
 
   const impactMetrics = [
-    { label: 'Students Supported', value: '9', icon: Users },
-    { label: 'University Scholarships Awarded', value: '7', icon: GraduationCap },
-    { label: 'Language Scholarships Awarded', value: '11', icon: Target },
-    { label: 'Communities Supported', value: '4', icon: House },
+    { label: t('metric_students-supported'), value: '9', icon: Users },
+    { label: t('university-scholarships-awarded'), value: '7', icon: GraduationCap },
+    { label: t('language-scholarships-awarded'), value: '11', icon: Target },
+    { label: t('communities-supported'), value: '4', icon: House },
   ];
 
   return (
@@ -159,10 +139,10 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
       <section className="bg-primary text-primary-foreground py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="mb-6 text-center font-bold text-2xl">
-                  Impact & Stories
+                  {t('nav_impact_and_stories')}
               </h2>
           <p className="max-w-3xl mx-auto">
-            See how your generosity opens the door to education and opportunity.
+            {t('impact_presentation')}
           </p>
         </div>
       </section>
@@ -171,12 +151,12 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Our Impact in Numbers
+                  {t('impact_numbers')}
               </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>
-                <CardTitle>Students Supported Through <b>University</b> Over Time</CardTitle>
+                <CardTitle>{t('graph_student_university1')} <b>{t('graph_student_university2')}</b> {t('over_time')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <ResponsiveContainer width="96%" height={300}>
@@ -196,7 +176,7 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
 
             <Card>
               <CardHeader>
-                <CardTitle>Students Supported With <b>Foreign Language Classes</b> Over Time</CardTitle>
+                <CardTitle>{t('graph_student_language1')} <b>{t('graph_student_language2')}</b> {t('over_time')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <ResponsiveContainer width="96%" height={300}>
@@ -216,7 +196,7 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
 
             <Card>
               <CardHeader>
-                <CardTitle><b>Scholarship Attribution</b></CardTitle>
+                <CardTitle><b>{t('scholarship-attribution')}</b></CardTitle>
               </CardHeader>
               <CardContent>
                 <ResponsiveContainer width="100%" height={300}>
@@ -243,7 +223,7 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
 
             <Card>
               <CardHeader>
-                <CardTitle><b>Areas Served in Cartagena</b></CardTitle>
+                <CardTitle><b>{t('areas-served-in-cartagena')}</b></CardTitle>
               </CardHeader>
               <CardContent>
                 <ResponsiveContainer width="100%" height={300}>
@@ -327,7 +307,7 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
       <section className="py-16 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Impact at a Glance
+                  {t('impact_glance')}
               </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {impactMetrics.map((metric, index) => (
@@ -347,7 +327,7 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
       <section className="py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-bold text-2xl">
-                  Student Stories
+                  {t('impact_students_stories')}
               </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -371,7 +351,7 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
               </Card>
             ))}
           </div>
-          <p className="py-4 max-w-6x3 text-center mx-auto"><i>Stories and images shared with consent.</i></p>
+          <p className="py-4 max-w-6x3 text-center mx-auto"><i>{t('image_consent')}</i></p>
         </div>
       </section>
 
@@ -379,10 +359,10 @@ export function ImpactStoriesPage({ onNavigate }: ImpactStoriesPageProps) {
       <section className="py-12 bg-muted">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="mb-6 text-center font-bold text-2xl">
-            Stay Connected
+            {t('home_newsletter_section')}
           </h2>
           <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter to get notified about new events, student stories, and impact updates from ALZA Foundation.
+            {t('home_newsetter_text')}
           </p>
           <div className="relative w-full" style={{ height: '270px' }}>
             <iframe 
