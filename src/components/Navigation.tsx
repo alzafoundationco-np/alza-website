@@ -53,7 +53,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
             </button>
           </div>
 
-          {/* Desktop Navigation - PERMANENTLY LARGE TEXT (text-base) and NO OVERLAPPING */}
+          {/* Desktop Navigation - PERMANENTLY SMALL TEXT (text-sm) and NO OVERLAPPING */}
           {/* We use flex-wrap here so if the screen is narrow, items wrap beautifully rather than crashing */}
           <div className="hidden md:flex flex-wrap items-center justify-center gap-x-2 lg:gap-x-4 py-2 text-sm font-medium flex-grow px-4">
             {navItems.map((item) => (

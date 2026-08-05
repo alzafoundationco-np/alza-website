@@ -20,8 +20,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
   const { t } = useTranslation();
 
   const stats = [
-    { label: t('metric_total-students-supported'), value: '9', icon: Users },
-    { label: t('metric_active-university-scholarships'), value: '7', icon: GraduationCap },
+    { label: t('metric_total-students-supported'), value: '11', icon: Users },
+    { label: t('metric_active-university-scholarships'), value: '8', icon: GraduationCap },
     { label: t('metric_active-language-scholarships'), value: '4', icon: Globe },
   ];
 
