@@ -44,12 +44,12 @@ export function AboutPage() {
       bio: t('team_location_ny'),
       image: danielImage,
     },
-    {
+    /*{
       name: 'Christina Bubuioc',
       role: t('team_role_programs'),
       bio: t('team_location_nc'),
       image: christinaImage,
-    },
+    },*/
     {
       name: 'Flora Cazalis',
       role: t('team_role_communication'),
